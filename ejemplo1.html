@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Demo jQuery - jQueryUI - CouchDB</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body>
+    
+      <h3>Ejemplo de Uso de Jquery + CouchDB</h3>
+      <div id="pestanias">
+        <ul>
+          <li><a href="t1">Principal</a></li>
+        </ul>
+        <div id="t1">
+          <p id="mensajeFinal"></p>
+          <button type="submit">Obtener información de CouchDB</button>
+        </div>
+      </div>
+  </body>
+  <script>
+    $(document).ready(function() {
+      $("#pestanias").tabs();
+      $( "button" ).click(function() {
+        $.ajax({
+              dataType: 'json',
+              url: "http://127.0.0.1:5984/base-ejemplo-1/_design/primero/_view/vistados"
+              }).done(function(data) {
+                console.log(Object.keys(data));
+                console.log(Object.keys(data.rows[0]));
+                console.log(Object.keys(data.rows[0].value));
+                for(var i=0; i<data.rows.length; i++){
+                  var c = data.rows[i].value.ciudad;
+                  var prov = data.rows[i].value.provincia;
+                  $('#mensajeFinal').append("<p> <b>Ciudad:</b> "+ c + " <b>Provincia:</b> " +
+                    prov + "</p>");
+                }
+              }).fail(function(msg, texto, textoerror) {
+                console.log( "error" );
+                console.log( msg );
+                console.log( textoerror );
+            });
+      });
+    });
+  </script>
+</html>
