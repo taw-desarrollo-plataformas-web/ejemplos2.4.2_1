@@ -37,7 +37,14 @@ Recuerde realizar el mismo proceso por cada información descrita en el **punto 
    
 ![image](https://github.com/user-attachments/assets/a27c3a91-53d9-4981-b51f-fbf3963c2bd6)
 
+6. Recuerde que la pantala de los permisos de la base de datos, debe quedar como se muestra
+
+   ![image](https://github.com/user-attachments/assets/5821f496-9f92-4646-9533-d1983bd152f1)
+
    
-7. Abrir en u navegador el archivo **HTML** del presente repositorio y verificar que se muestre la información
+8. Abrir en u navegador el archivo **HTML** del presente repositorio y verificar que se muestre la información
+
+![image](https://github.com/user-attachments/assets/0303fe18-586b-488c-9a05-b8d21ab78df6)
+
 
   
