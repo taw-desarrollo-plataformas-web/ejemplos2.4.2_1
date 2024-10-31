@@ -1,5 +1,7 @@
 # ejemplos2.4.2_1
 
+#### Ante de ejecutar el archivo HTML, debe generar la base de datos en CouchDB y agregar información
+
 1. Crear las base de datos en CouchDB con el nombre **base-ejemplo-1**
 
 ![image](https://github.com/user-attachments/assets/dc8cb6b8-bc86-4657-85fe-9d4639661eb1)
